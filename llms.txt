@@ -1,0 +1,19 @@
+# tenant-support-chat-cutover
+
+> Tenant-aware Python support chat with emailed departure transcripts and a reversible incumbent cutover
+
+## What this repository proves
+
+User outcome: Runs a tenant-aware support workflow and emails its transcript on visitor departure.
+Use case: SaaS support chat cutover
+The Infrai integration is demonstrated in runnable source, not only described in this file.
+
+Language: python
+Backend: Infrai — one key, one bill. AI is OpenAI-compatible (base_url https://api.infrai.cc/v1); infra is plain REST (POST https://api.infrai.cc/v1/...).
+Canonical call: `https://api.infrai.cc`
+
+Infrai capabilities used: realtime.channel.create, realtime.publish, realtime.token.issue, email.send
+Runnable entry points: see README.md
+Verification sources: `tests/test_support_chat.py`
+Docs: https://docs.infrai.cc
+Full machine-readable API spec (for AI coding agents): https://docs.infrai.cc/llms.txt

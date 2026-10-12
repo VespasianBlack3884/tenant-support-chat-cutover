@@ -1,0 +1,25 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "tenant-support-chat-cutover"
+version = "0.1.0"
+description = "Tenant-aware support chat with departure transcript delivery"
+requires-python = ">=3.10"
+dependencies = [
+  "fastapi>=0.110,<1",
+  "httpx>=0.27,<1",
+  "pydantic>=2.6,<3",
+  "uvicorn>=0.29,<1",
+]
+
+[project.optional-dependencies]
+test = ["pytest>=8,<9"]
+
+[tool.setuptools]
+py-modules = ["support_chat", "support_service", "run_support_chat"]
+
+[tool.pytest.ini_options]
+pythonpath = ["."]
+testpaths = ["tests"]
